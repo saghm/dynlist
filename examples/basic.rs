@@ -3,11 +3,11 @@ extern crate dynlist;
 
 fn main() {
     let list = dyn_list![[[1]], 2, [3, [4, 5]]];
-    println!("{}", list);
+    println!("dynlist: {}", list);
 
     let sum: i32 = list.iter().sum();
-    println!("{}", sum);
+    println!("sum: {}", sum);
 
     let flattened: Vec<_> = list.into_iter().collect();
-    println!("{:?}", flattened);
+    println!("collected into vec: {:?}", flattened);
 }
